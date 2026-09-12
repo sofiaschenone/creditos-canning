@@ -12,7 +12,7 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="src/assets/creditos-canning.jpg" 
+              src="/creditos-canning.jpg" 
               alt="Créditos Canning" 
               className="w-12 h-12 rounded-full object-cover border-2 border-[#4C4424] shadow-[0_0_15px_rgba(76,68,36,0.3)]"
             />
