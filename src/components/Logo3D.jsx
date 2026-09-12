@@ -19,7 +19,7 @@ export default function Logo3D() {
           
           {/* Imagen real del logo de Créditos Canning */}
           <img 
-            src="src/assets/creditos-canning.jpg" 
+            src="/creditos-canning.jpg" 
             alt="Créditos Canning 3D Effect" 
             className="w-full h-full object-cover rounded-full shadow-inner transform group-hover:scale-110 transition-transform duration-500"
           />

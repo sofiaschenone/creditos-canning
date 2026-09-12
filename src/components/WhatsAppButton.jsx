@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function WhatsAppButton({ text, className = "", iconSize = 24 }) {
