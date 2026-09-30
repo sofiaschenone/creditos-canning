@@ -11,6 +11,7 @@ import {
 import Logo3D from "./components/Logo3D";
 import WhatsAppButton from "./components/WhatsAppButton";
 import LoanCard from "./components/LoanCard";
+import ContactSection from './components/ContactSection';
 
 const LandingPage = () => {
   return (
@@ -131,29 +132,33 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      {/* SECCIÓN DE CONTACTO Y MAPA */}
+      <ContactSection />
 
       {/* FOOTER */}
-      <footer className="py-12 px-4 text-center bg-[#0D0B0E] border-t border-[#151415]">
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
-          <div className="flex items-center gap-4">
+      <footer className="py-12 px-4 bg-[#0D0B0E] border-t border-[#151415] text-slate-400">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+          
+          {/* Columna 1: Marca y Slogan */}
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <h4 className="text-lg font-bold tracking-widest text-slate-100 uppercase">
+              Créditos <span className="text-[#4C4A4D]">Canning</span>
+            </h4>
+            <p className="text-xs text-slate-400">Compromiso y respeto. Cerca de vos siempre.</p>
+          </div>
+
+          {/* Columna 2: Datos de Contacto y Dirección */}
+          <div className="flex flex-col items-center gap-1.5 text-xs">
+            <p className="text-amber-400 font-semibold">📍 José María Ezeiza 109, 1er piso C</p>
+            <p className="text-slate-300">📧 martincanning75@gmail.com</p>
+            <p className="text-slate-500">Ezeiza, Buenos Aires</p>
+          </div>
+
+          {/* Columna 3: Redes Sociales */}
+          <div className="flex items-center justify-center md:justify-end gap-4">
             {/* Instagram SVG */}
-            <a
-              href="https://instagram.com/creditoscanning"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-[#121013] rounded-full border border-[#151415] text-amber-400 hover:border-[#4C4424] hover:scale-110 transition-all flex items-center justify-center"
-              aria-label="Instagram"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#121013] rounded-full border border-[#151415] text-amber-400 hover:border-[#4C4424] hover:scale-110 transition-all flex items-center justify-center" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -161,50 +166,24 @@ const LandingPage = () => {
             </a>
 
             {/* Facebook SVG */}
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-[#121013] rounded-full border border-[#151415] text-amber-400 hover:border-[#4C4424] hover:scale-110 transition-all flex items-center justify-center"
-              aria-label="Facebook"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#121013] rounded-full border border-[#151415] text-amber-400 hover:border-[#4C4424] hover:scale-110 transition-all flex items-center justify-center" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
 
             {/* WhatsApp */}
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/5491158759573"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-[#121013] rounded-full border border-[#151415] text-amber-400 hover:border-[#4C4424] hover:scale-110 transition-all flex items-center justify-center"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle size={22} />
+            <a href="https://wa.me/5491158759573" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#121013] rounded-full border border-[#151415] text-amber-400 hover:border-[#4C4424] hover:scale-110 transition-all flex items-center justify-center" aria-label="WhatsApp">
+              <MessageCircle size={20} />
             </a>
           </div>
-          <div>
-            <p className="text-slate-400 mb-2">
-              © 2026 Créditos Canning. Todos los derechos reservados.
-            </p>
-            <p className="text-[#4C4A4D] text-sm">
-              Compromiso y respeto. Cerca de vos siempre.
-            </p>
-          </div>
+
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-8 pt-6 border-t border-[#151415] text-center text-xs text-slate-500">
+          <p>© 2026 Créditos Canning. Todos los derechos reservados.</p>
         </div>
       </footer>
-
       {/* FLOATING WHATSAPP BUTTON */}
       <div className="fixed bottom-6 right-6 z-50">
         <WhatsAppButton
